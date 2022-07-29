@@ -4,11 +4,12 @@ class MyThread extends Thread {
 
     public MyThread(ThreadGroup mainGroup, String s) {
         super(mainGroup, s);
-        start();
+        start(); // при передече конструктору вызываем старт
     }
 
     @Override
     public void run() {
+//        System.out.println("Hello!!! I am - " + Thread.currentThread().getName() );
         try {
             while(!isInterrupted()) {
                 Thread.sleep(2500);
